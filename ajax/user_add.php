@@ -17,27 +17,21 @@
  * along with program; see the file docs/LICENSE. If not, write to the
  * Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
  */
-
-/**********************************
+ 
+ /**********************************
 	INITIALIZATION METHODS
  *********************************/
-require ('bootstrap.php');
-Pommo::init();
-$logger = & Pommo::$_logger;
-$dbo = & Pommo::$_dbo;
+require ('../bootstrap.php');
 
+Pommo::init();
+$logger = Pommo::$_logger;
+$dbo 	= Pommo::$_dbo;
+	
 /**********************************
 	SETUP TEMPLATE, PAGE
  *********************************/
 require_once(Pommo::$_baseDir.'classes/Pommo_Template.php');
 $smarty = new Pommo_Template();
 
-$state['limit'] = 10;
-$smarty->assign('state',$state);
-$smarty->assign('throttleTitle',Pommo::_T('Throttle Settings'));
-$smarty->assign('smtpTitle',Pommo::_T('SMTP Settings'));
-$smarty->assign('testTitle',Pommo::_T('Test Exchanger'));
-
-$smarty->display('admin/setup/setup_configure.tpl');
-Pommo::kill();
+$smarty->display('admin/setup/ajax/user_add.tpl');
 

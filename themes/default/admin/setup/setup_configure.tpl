@@ -3,6 +3,7 @@
 {include file="inc/ui.dialog.tpl"}
 {include file="inc/ui.tabs.tpl"}
 {include file="inc/ui.slider.tpl"}
+{include file="inc/ui.grid.tpl"}
 {/capture}
 
 {include file="inc/admin.header.tpl" sidebar='off'}
@@ -66,9 +67,11 @@ $().ready(function(){
 {/literal}
 
 {capture name=dialogs}
+{include file="inc/dialog.tpl" id="addUser" wide='true' tall='true'}
 {include file="inc/dialog.tpl" id="throttleWindow" title=$throttleTitle tall=true}
 {include file="inc/dialog.tpl" id="smtpWindow" title=$smtpTitle tall=true}
 {include file="inc/dialog.tpl" id="testWindow" title=$testTitle}
+{include file="inc/dialog.tpl" id=dialog wide=true tall=true}
 {/capture}
 
 {include file="inc/admin.footer.tpl"}

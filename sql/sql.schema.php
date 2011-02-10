@@ -237,3 +237,10 @@ CREATE TABLE :::mailings_hits::: (
   PRIMARY KEY  (`subscriber_id`, `mailing_id`)
 );
 
+-- USERS
+
+CREATE TABLE :::users::: (
+  `username` char(50) NOT NULL,
+  `password` char(40) NOT NULL,
+  PRIMARY KEY  (`username`)
+);
