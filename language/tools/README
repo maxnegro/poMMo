@@ -1,0 +1,8 @@
+Scripts in this directory are useful for updating master .pot file for
+translations. In particular, tsmarty2c.php is used to collect translation
+strings from smarty templates and compile a dummy file named smarty.c, with
+translation strings in "normal" xgettext format (ie _("translate me")).
+
+In order for the script to run successfully, xgettext and php (cli
+version) need to be installed on the system. The two executables are
+expected to be found in /usr/bin directory.
